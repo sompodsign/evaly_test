@@ -22,7 +22,7 @@ class BaseTest(unittest.TestCase):
         self.driver.close()
 
 
-# if __name__ == "__main__":
-#     unittest.TestLoader.sortTestMethodsUsing = None
-#     suite = unittest.TestLoader().loadTestsFromTestCase(TestPages)
-#     unittest.TextTestRunner(verbosity=1).run(suite)
+if __name__ == "__main__":
+    unittest.TestLoader.sortTestMethodsUsing = None
+    suite = unittest.TestLoader().loadTestsFromTestCase(TestPages)
+    unittest.TextTestRunner(verbosity=1).run(suite)
