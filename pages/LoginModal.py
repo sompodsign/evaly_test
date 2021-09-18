@@ -18,9 +18,15 @@ class LoginModal(BasePage):
     def click_login_button(self):
         self.find_element(*self.locator.LOGIN).click()
 
+    def click_profile_icon(self):
+        self.find_element(*self.locator.PROFILE_ICON).click()
+
     def login(self):
         print(user)
         self.enter_username(user['username'])
         self.enter_password(user['password'])
         self.click_login_button()
+        self.wait_element(*self.locator.PROFILE_ICON)
+        self.click_profile_icon()
+
         return HomePage(self.driver)
