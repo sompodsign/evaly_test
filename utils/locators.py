@@ -1,8 +1,6 @@
 from selenium.webdriver.common.by import By
 
 
-# for maintainability we can seperate web objects by page name
-
 class Locators(object):
     POPUP = (By.XPATH, '//body/reach-portal[1]/div[1]/div[1]/div[1]/section[1]/div[1]/button[1]/*[1]')
     USER_ICON = (By.XPATH, "//body/div[@id='__next']/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/button[1]")
@@ -15,4 +13,5 @@ class Locators(object):
     PRODUCT = (By.XPATH, "//div[@class='layouts___StyledDiv-sc-6pqol9-0 iJmXUL']//a")
     DETAIL_PRICE = (By.XPATH, "//body/div[@id='__next']/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/h2[1]")
     ACCORDION = (By.XPATH, "/html[1]/body[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div")
-    PROFILE_ICON = (By.XPATH, "//div[@class='bg-white shadow p-1 rounded-full cursor-pointer inline-block']")
+    AVATAR = (By.XPATH, "//img[@alt='Avatar']")
+    FULL_NAME = (By.XPATH, "//body/div[@id='__next']/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/h3[1]")

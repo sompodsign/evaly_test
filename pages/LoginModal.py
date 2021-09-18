@@ -1,3 +1,4 @@
+from selenium.webdriver.common.keys import Keys
 from utils.locators import *
 from pages.base_page import BasePage
 from utils.users import user
@@ -18,15 +19,18 @@ class LoginModal(BasePage):
     def click_login_button(self):
         self.find_element(*self.locator.LOGIN).click()
 
-    def click_profile_icon(self):
-        self.find_element(*self.locator.PROFILE_ICON).click()
+    # def click_avatar(self):
+    #     self.find_element(*self.locator.AVATAR).click()
+
+    # def check_name_after_login(self):                             # login doesn't work because of webdriver detection.
+    #     self.wait_element(*self.locator.AVATAR)
+    #     self.click_avatar()
+    #     elem = self.find_element(*self.locator.FULL_NAME)
+    #     return elem.text
 
     def login(self):
         print(user)
         self.enter_username(user['username'])
         self.enter_password(user['password'])
         self.click_login_button()
-        self.wait_element(*self.locator.PROFILE_ICON)
-        self.click_profile_icon()
-
         return HomePage(self.driver)
