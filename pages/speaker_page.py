@@ -2,7 +2,7 @@ from pages.base_page import BasePage
 from utils.locators import Locators
 from openpyxl import Workbook
 import os
-import pandas as pd
+# import pandas as pd
 
 
 class SpeakerPage(BasePage):
